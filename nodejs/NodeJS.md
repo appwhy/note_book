@@ -131,6 +131,12 @@ hello.foo();
 
 http： 该模块主要用于搭建 HTTP 服务端和客户端，要使用 HTTP 服务器和客户端功能必须调用 http 模块。
 
+util 是一个Node.js 核心模块，提供常用函数的集合，用于弥补核心 JavaScript 的功能 过于精简的不足。
+
+```
+const util = require('util');
+```
+
  fs ：   该模块供了一个 API，用于以接近标准 POSIX 函数的方式与文件系统进行交互。
 
 ```js
