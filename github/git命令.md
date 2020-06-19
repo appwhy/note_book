@@ -249,4 +249,33 @@ pull：
 * `git pull origin foo` 相当于`git fetch origin foo; git merge o/foo`。
 * `git pull origin bar~1:bugFix` 相当于`git fetch origin bar~1:bugFix; git merge bugFix`
 
+## 一些小技巧
+
+### .gitignore文件不起作用
+
+在开发过程中，在 `.gitignore`中添加了一些忽略 项，但仍会被提交。
+
+原因：新建的文件在git中会有缓存，如果某些文件已经被纳入了版本管理中，就算是在.gitignore中已经声明了忽略路径也是不起作用的，这时候我们就应该先把本地缓存删除，然后再进行git的push，这样就不会出现忽略的文件了。
+
+命令如下：
+
+```bash
+git rm -r --cached .   # -r是递归删除， --cache只从索引中删除，不删除本地文件
+git add .
+git commit -m 'update .gitignore'
+```
+
+### git commit之后想撤销
+
+```bash
+git reset --soft HEAD^    # --soft表示只重置HEAD，--hard则重置HEAD，索引，工作树
+```
+
+仅仅是撤回commit操作，写的代码仍然保留。
+
+不删除工作空间改动代码，撤销commit，不撤销git add . 
+
+### commit注释写错
+
+只是想改一下注释，只需要： `git commit --amend`
 
