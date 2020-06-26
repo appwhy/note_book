@@ -2,7 +2,7 @@
 import json
 import os
 
-def create_summary(base='.', exclude_dir=['docs', '_book', 'node_modules']):
+def create_summary(base='.', exclude_dir=['docs', '_book', 'node_modules', 'images']):
     text = '# Summary\n'
     book_path = os.path.join(base, 'book.json')
     with open(book_path, 'r', encoding='utf-8') as f:
