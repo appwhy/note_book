@@ -360,3 +360,23 @@ conda info --envs        # 列出所有环境
 conda env list 
 ```
 
+## explorer预览`py`文件
+
+win10 文件夹预览文件功能开启：点击 [文件, 主页, 共享, 查看] 中的“查看”选项，在出现的选择中最左边有“预览窗格”选项。
+
+1. 打开注册表编辑器（registry editor）：`Win+R` 键入 `regedit` 打开注册表。
+
+2. 找到 `\HKEY_CLASSES_ROOT\.py` 项， 如果没有自行创建。
+
+3. 对`.py` 项增加如下键值对：
+
+   |     名称      |  类型  |            数据             |
+   | :-----------: | :----: | :-------------------------: |
+   |    (默认)     | REG_SZ | Python.File 或 py_auto_file |
+   | Content Type  | REG_SZ |         plain/text          |
+   | PerceivedType | REG_SZ |            text             |
+
+4. 关闭注册表，此时就能预览py文件了。对其他文件同意有效
+
+
+

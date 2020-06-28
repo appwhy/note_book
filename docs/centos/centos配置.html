@@ -133,14 +133,7 @@
             
         </li>
     
-
-    
-        
-        <li class="divider"></li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" >
+        <li class="chapter " data-level="1.2" >
             
                 <span>
             
@@ -154,7 +147,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1.1" data-path="centos配置.html">
+        <li class="chapter active" data-level="1.2.1" data-path="centos配置.html">
             
                 <a href="centos配置.html">
             
@@ -167,7 +160,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2" data-path="linux常用命令.html">
+        <li class="chapter " data-level="1.2.2" data-path="linux常用命令.html">
             
                 <a href="linux常用命令.html">
             
@@ -180,7 +173,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3" data-path="linux知识点.html">
+        <li class="chapter " data-level="1.2.3" data-path="linux知识点.html">
             
                 <a href="linux知识点.html">
             
@@ -193,12 +186,25 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.4" data-path="其他命令.html">
+        <li class="chapter " data-level="1.2.4" data-path="其他命令.html">
             
                 <a href="其他命令.html">
             
                     
                     其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="问题集合.html">
+            
+                <a href="问题集合.html">
+            
+                    
+                    问题集合
             
                 </a>
             
@@ -218,7 +224,7 @@
         
         
     
-        <li class="chapter " data-level="3.1" >
+        <li class="chapter " data-level="2.1" >
             
                 <span>
             
@@ -232,7 +238,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="../github/git命令.html">
+        <li class="chapter " data-level="2.1.1" data-path="../github/git命令.html">
             
                 <a href="../github/git命令.html">
             
@@ -245,7 +251,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.2" data-path="../github/项目介绍.html">
+        <li class="chapter " data-level="2.1.2" data-path="../github/项目介绍.html">
             
                 <a href="../github/项目介绍.html">
             
@@ -270,7 +276,7 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../nodejs/NodeJS.html">
+        <li class="chapter " data-level="3.1" data-path="../nodejs/NodeJS.html">
             
                 <a href="../nodejs/NodeJS.html">
             
@@ -290,7 +296,7 @@
         
         
     
-        <li class="chapter " data-level="5.1" >
+        <li class="chapter " data-level="4.1" >
             
                 <span>
             
@@ -304,7 +310,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.1.1" data-path="../other/vscode.html">
+        <li class="chapter " data-level="4.1.1" data-path="../other/vscode.html">
             
                 <a href="../other/vscode.html">
             
@@ -317,7 +323,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.2" data-path="../other/快速搭建http服务.html">
+        <li class="chapter " data-level="4.1.2" data-path="../other/快速搭建http服务.html">
             
                 <a href="../other/快速搭建http服务.html">
             
@@ -330,7 +336,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.3" data-path="../other/谷歌浏览器.html">
+        <li class="chapter " data-level="4.1.3" data-path="../other/谷歌浏览器.html">
             
                 <a href="../other/谷歌浏览器.html">
             
@@ -355,7 +361,7 @@
         
         
     
-        <li class="chapter " data-level="6.1" >
+        <li class="chapter " data-level="5.1" >
             
                 <span>
             
@@ -369,7 +375,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1.1" data-path="../windows/windows配置.html">
+        <li class="chapter " data-level="5.1.1" data-path="../windows/windows配置.html">
             
                 <a href="../windows/windows配置.html">
             
@@ -457,7 +463,7 @@
 </code></pre>
 <p>&#x8BF4;&#x660E;&#x7F3A;&#x4E4F;ncurses&#x4F9D;&#x8D56;&#xFF0C;&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5B89;&#x88C5;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># &#x8FDB;&#x5165;ncurses&#x6E90;&#x7801;&#x76EE;&#x5F55;</span>
-./configure --refix<span class="token operator">=</span>/home/username/ncurses_dir
+./configure --prefix<span class="token operator">=</span>/home/username/ncurses_dir
 <span class="token function">make</span>
 <span class="token function">make</span> <span class="token function">install</span>
 
@@ -476,7 +482,7 @@
 </code></pre>
 <p>&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x5C06;screen&#x5B89;&#x88C5;&#x5230;screen_dir&#x76EE;&#x5F55;&#x4E0B;&#x4E86;&#x3002;&#x63A5;&#x7740;&#x5728;.bashrc&#x6587;&#x4EF6;&#x91CC;&#x8BBE;&#x7F6E;screen&#x6267;&#x884C;&#x8DEF;&#x5F84;&#xFF0C;&#x52A0;&#x5165;export PATH=/home/username/screen_dir/bin:$PATH&#xFF0C;&#x63A5;&#x7740;&#x6267;&#x884C;source .bashrc&#x66F4;&#x65B0;PATH&#xFF0C;&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;screen&#x5C31;&#x80FD;&#x8FDB;&#x5165;screen&#x754C;&#x9762;&#x4E86;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">Copyright @appwhy all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x4E8E;&#xFF1A;
-2020-04-04 22:18:42
+2020-06-28 21:28:14
 </span></footer>
                                 
                                 </section>
@@ -516,7 +522,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"centos配置","level":"2.1.1","depth":2,"next":{"title":"linux常用命令","level":"2.1.2","depth":2,"path":"centos/linux常用命令.md","ref":"centos/linux常用命令.md","articles":[]},"previous":{"title":"centos","level":"2.1","depth":1,"ref":"","articles":[{"title":"centos配置","level":"2.1.1","depth":2,"path":"centos/centos配置.md","ref":"centos/centos配置.md","articles":[]},{"title":"linux常用命令","level":"2.1.2","depth":2,"path":"centos/linux常用命令.md","ref":"centos/linux常用命令.md","articles":[]},{"title":"linux知识点","level":"2.1.3","depth":2,"path":"centos/linux知识点.md","ref":"centos/linux知识点.md","articles":[]},{"title":"其他命令","level":"2.1.4","depth":2,"path":"centos/其他命令.md","ref":"centos/其他命令.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"centos/centos配置.md","mtime":"2020-04-04T14:18:42.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-26T13:26:19.101Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"centos配置","level":"1.2.1","depth":2,"next":{"title":"linux常用命令","level":"1.2.2","depth":2,"path":"centos/linux常用命令.md","ref":"centos/linux常用命令.md","articles":[]},"previous":{"title":"centos","level":"1.2","depth":1,"ref":"","articles":[{"title":"centos配置","level":"1.2.1","depth":2,"path":"centos/centos配置.md","ref":"centos/centos配置.md","articles":[]},{"title":"linux常用命令","level":"1.2.2","depth":2,"path":"centos/linux常用命令.md","ref":"centos/linux常用命令.md","articles":[]},{"title":"linux知识点","level":"1.2.3","depth":2,"path":"centos/linux知识点.md","ref":"centos/linux知识点.md","articles":[]},{"title":"其他命令","level":"1.2.4","depth":2,"path":"centos/其他命令.md","ref":"centos/其他命令.md","articles":[]},{"title":"问题集合","level":"1.2.5","depth":2,"path":"centos/问题集合.md","ref":"centos/问题集合.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"centos/centos配置.md","mtime":"2020-06-28T13:28:14.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-28T13:30:46.190Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

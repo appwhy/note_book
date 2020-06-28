@@ -2,13 +2,12 @@
 
 * [简介](INTRO.md)
 
----
-
 * centos
   * [centos配置](centos/centos配置.md)
   * [linux常用命令](centos/linux常用命令.md)
   * [linux知识点](centos/linux知识点.md)
   * [其他命令](centos/其他命令.md)
+  * [问题集合](centos/问题集合.md)
 
 ---
 

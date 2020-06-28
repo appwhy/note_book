@@ -37,7 +37,7 @@ configure: error: !!! no tgetent - no screen
 
 ```bash
 # 进入ncurses源码目录
-./configure --refix=/home/username/ncurses_dir
+./configure --prefix=/home/username/ncurses_dir
 make
 make install
 
