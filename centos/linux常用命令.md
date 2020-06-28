@@ -249,6 +249,13 @@ global regular expression print
 * `-v`：显示所有不包含模式的行
 * `-i`：字符比较时忽略大小写
 
+grep时排除指定的文件和目录：
+
+```bash
+grep -rn --exclude-dir=venv 'abcdefg' .
+grep -nR --exclude="cscope.out" --exclude="tags" 'abcdefg' .
+```
+
 其他命令
 
 * egrep：使用扩展正则表达式，在指定模式方面比 grep 更灵活。
