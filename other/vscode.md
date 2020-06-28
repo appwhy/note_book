@@ -401,27 +401,3 @@ Plantuml我主要用来绘制流程图，时序图，非常强大，这两种图
 Drawio绘制一些复杂的图，像一些教材上的那种展示图，比如《深入理解Linux内核》中那些数据结构的图片，用Plantuml就难以绘制。但使用Drawio加上自带手绘风格，比较漂亮，对标Visio
 
 Graphviz一般是在代码中自动生成的的，展示一些数据流，Profile结果什么的，基本上不会去手动写。
-
-## python
-
-conda：
-
-```bash
-conda create -n learn_python36 python=3.6
-
-conda env list
-```
-
-jupyter：
-
-```bash
-pip install jupyterlab
-jupyter-lab
-```
-
-format简略写法：
-
-```python
-print('a+b={}'.format(a+b))
-print(f'a+b={a+b}')
-```
