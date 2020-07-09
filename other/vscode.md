@@ -12,7 +12,15 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 
 ## 面板命令
 
+上面：
+
+`Ctrl+Shift+ P` 或 `F1`：打开仪表盘，可以搜索所有命令
+
+
+
 左边：
+
+`Ctrl+B`：打开/关闭左边的文件导航（sidebar）。隐藏/显示侧边栏
 
 `Ctrl+ Shift+E`：打开Explorer
 
@@ -34,13 +42,7 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 
 `CtrI+ Shift+ U`：打开Output窗口。按第二次可以关闭
 
-`Ctrl+Shift+ P` 或 `F1`：打开仪表盘，可以搜索所有命令
-
 **Ctrl + `**：打开terminal。按第二次可以关闭
-
-
-
-`Ctrl+B`：打开/关闭左边的文件导航（sidebar）。隐藏/显示侧边栏
 
 
 
@@ -52,7 +54,7 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 
 `Ctrl+Tab`：显示当前打开的所有文件。按`tab` 进行选择
 
-`Alt+←/→`：选择前/后一个文件
+`Alt+←/→`：选择前/后一个文件。前后是指你浏览文件的前后，不是打开文件在屏幕上的前后。
 
 ------
 
@@ -60,7 +62,7 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 
 `Ctrl+P`：键入文件名，会快速打开某个文件
 
-- 直接输入文件名，跳转到文件
+- 直接输入文件名，`Enter`后打开该文件， `Ctrl+Enter` 则会在水平窗口中打开。
 - 键入文件名后，按`→` 键，会打开相应文件，但不退出命令板，可以继续打开其他文件
 - `?`：列出当前可执行的命令。命令后面跟一个空格，则会进入下一级。如键入`term+space`，就会出现一个下拉列表，包含所有terminal名字。
 - `@`：显示所有symbol。 跳转到 `symbol`（搜索变量或者函数），也可以 `Ctrl+Shift+O` 直接进入
@@ -79,6 +81,9 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 - `Ctrl+Home` ： 光标移到文件开头
 - `Ctrl+End`：光标移到文件结尾。
 - `Ctrl+U`：光标退回上一个位置。
+- `Ctrl+←/→`：光标左移/右移一个单词
+- `Ctrl+Backspace`：删除光标前一个单词
+- `Ctrl+Delete`：删除光标后面的一个单词
 
 ## 多光标编辑
 
@@ -90,8 +95,8 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 
 `Ctrl+Shift+L`：选择所有的单词（当前光标所处的单词），在单词后添加光标
 
-- `Ctrl+F2` : Change all Occurrences
-- `Ctrl+Shift+L` : Select All Occurrences of Find Match
+- `Ctrl+F2` : Change all Occurrences of Current Word
+- `Ctrl+Shift+L` : Select All Occurrences of Current Selection
 
 `Ctrl+D`：选中当前光标处的单词，再按一次，则选中下一个相同的单词
 
@@ -105,27 +110,18 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 - `Ctrl + Enter`：在当前行下面新增一行然后跳至该行。
 - `Ctrl + Shift + Enter`：在当前行上面增加一行并跳至该行。
 - `Alt+↑↓`：将当前行向上/下移动。
+- `Shift+Alt+↑/↓`：复制当前行到上/下一行
 - `Ctrl+C `：复制选中内容或者复制当前行
 - `Ctrl+X`：切剪选中内容或者当前行
 - `Ctrl+F`：查找。光标定位不在搜索框时，使用F3进行上下查找
 - `Ctrl+Shift+F`：文件夹中查找（在多个文件中查找字符串）
 - `Ctrl+H`：替换
 - `Ctrl+/`：行注释
-- `Shift+Alt+A`：块注释
+- ？ `Shift+Alt+A`：块注释
 
+---
 
-
-- `Shift+Alt+↑/↓`：复制当前行到上/下一行
-
-- `Ctrl+Shift+K`：删除当前行
-
-- `Ctrl+C`：复制当前行，或复制选中内容
-
-- `Ctrl+X`：切剪当前行，或切剪选中内容。可以当作删除当前行来用
-
-- `Alt+↑/↓`：移动当前行到上/下一行
-
-  
+* `Ctrl+[/]`：将当前行进行左右缩进
 
 ## IntelliSense
 
@@ -250,11 +246,23 @@ VS Code 默认的静态检查工具是 pylint 。
 
 
 
+`Ctrl+←/→`：每次光标移动一个单词，而不是一个字符
+
+
+
 排序import语句：右键选择“排序import语句”
 
 
 
 提取方法/变量需要安装Python库 `rope`
+
+---
+
+选中字符串， `Ctrl+Shift+P` 调出命令面板，找到命令 “Transform to Lowercase/Uppercase”。
+
+
+
+
 
 ## 关于code的命令行
 
@@ -295,64 +303,105 @@ VS Code 还支持单元测试框架 pytest、unittest 和 nosetest。
 ## 调试
 
 - `tasks.json`：Task Runner
-- `launch.json`：debugger
 
-
-
-编辑如下所示的 `tasks.json` 文件，创建新任务来运行 Flask 开发服务：
-
-```text
+```json
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "version": "2.0.0",
-  "tasks": [
-    {
-
-      "label": "Run Debug Server",
-      "type": "shell",
-      "command": "${workspaceRoot}/.venv/bin/flask run -h 0.0.0.0 -p 5000",
-      "group": {
-          "kind": "build",
-          "isDefault": true
-       }
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo hello world",
+        },
+        {
+            "label": "ls",
+            "type": "shell",
+            "command": "ls -al"
+        }
+    ]
 }
 ```
 
-Flask 开发服务使用环境变量来获取应用程序的入口点。 如 **使用环境变量** 一节所说，可以在 `.env` 文件中声明这些变量：
 
-```text
-FLASK_APP=wsgi.py
-FLASK_DEBUG=True
+
+* `launch.json`：debugger
+
+```json
+{
+     "name": "Python: startup.py",
+     "type": "python",
+     "request": "launch",
+     "program": "${workspaceFolder}/startup.py",
+     "console": "integratedTerminal",
+     "args" : ["--port", "1593"],
+     "preLaunchTask": "ls"
+},
 ```
 
-这样就可以使用快捷键 `Ctrl + Shift + B` 来执行任务了。
+默认参数：
 
-------
+* `name` : 该调试显示的名称
+* `type` : 调试类型。如 `node` 、`python`
+* `program` :  调试的具体文件，一般有2种写法
+  * `${workspaceFolder}/file.py` : 某个具体的文件
+  * `${file}` ： 调试当前文件
+* `console` : 
+  * `internalConsole` :  在vscode的调试控制台(Debug Console)中输出结果
+  * `integratedTerminal` : 在vscode 集成的terminal 中输出结果
+  * `externalTerminal` : 打开另外的terminal输出结果
+* `request` : 
+  * `launch` ： VSCode 会打开这个程序然后进入调试
+  * `attach` ： 通过`Process ID`，对正在运行的程序进行调试
 
-### 集成调试
+其他参数：
 
-修改lanuch.json
+* `python` : 自定义Python解释器的位置
+  * 添加参数： `"python": ["<path>", "<arg>",...]`
 
-"name":  该调试显示的名称；
+* `args` : 一些（自定义）的参数。
+* `cwd` ：程序运行的工作目录，默认为 `${workspaceFolder}`
+* `preLaunchTask` : 在调试前运行的命令，需要在task.json中编写
 
-"type": 调试类型；
 
-"program": 
 
-"consolo":  "internalConsole" 在vscode的“调试控制台”中输出结果， "integratedTerminal" 在vscode 集成的terminal 中输出结果；（在调试时，推荐"internalConsole" ，下面会具体讲到）；
+## PYTHONPATH
 
-"pythonPath": Python解释器的位置；
+有2处可以修改`PYTHONPATH`：
 
-"request": 必填项，有两种类型，分别是`launch`和`attach`，前者的意思就是 VSCode 会打开这个程序然后进入调试，后者的意思是。。。（用不到，还没用过，我也不会。。）
+1：settings.json
 
-"args": 一些（自定义）的参数。
+```json
+"terminal.integrated.env.windows": {        # windows可以替换为linux，看自己机器
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+```
 
-${file} - the current opened file ；
+2：`.env` 文件：
 
-${workspaceFolder} - the path of the folder opened in VS Code ；
+```
+# settings.json
+"python.envFile": "${workspaceFolder}/.vscode/.env",
+
+# .env
+PYTHONPATH="${workspaceFolder}"
+```
+
+
+
+> When the terminal settings are used, PYTHONPATH affects any tools that are run within the terminal by a user, as well as any action the extension performs for a user that is routed through the terminal such as debugging. However, in this case when the extension is performing an action that isn't routed through the terminal, such as the use of a linter or formatter, then this setting will not have an effect on module look-up.
+
+> When PYTHONPATH is set using an `.env` file, it will affect anything the extension does on your behalf and actions performed by the debugger, but it will not affect tools run in the terminal.
+
+
+
+## 常用占位符
+
+* `${workspaceFolder}` ：项目根目录（VS Code打开的目录）
+* `${file}` : 当前打开的文件
+* `${relativefile}`：当前文件相对于 `${workspaceFolder}` 的路径
+* `${cwd}`：current working directory on startup
+
+
 
 ## 插件
 
