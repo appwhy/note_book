@@ -426,11 +426,28 @@ PYTHONPATH="${workspaceFolder}"
 
 #### Bookmarks
 
-我们能够使用**Ctrl+Alt+K**、**Ctrl+Alt+J**、**Ctrl+Alt+L**快捷键添加标签，并且可以快速调整到指定标签位置。
+常用命令：
+
+* `Bookmarks: Toggle` :  添加书签。快捷键 `Ctrl+Alt+K`
+* `Bookmarks: Toggle Labled` : 为书签添加别名，显示时就不会显示代码，而是别名。
+* `Bookmarks: List` :  列出当前文件的书签
+* `Bookmarks: List from All Files` :  列出所有文件的书签
+* `Bookmarks: Focus on Explorer View` : 在左边的侧边栏显示所有书签
+* `Bookmarks: Clear` : 清除当前文件的书签
+* `Bookmarks: Clear from All Files` : 慎用
 
 #### TODO Highlight
 
 我们在开发过程中，有时会为了测试或某种原因，某段代码需要之后进行修改和完善。如果就不做一些标记，时间久了、需要修改的多了，就很难区分出哪些是需要修改的、哪些是不需要修改的。因此养成做标记的好习惯对提升开发效率具有很大的帮助。
+
+配置可以写在 `User` 级别上，可以全局应用。
+
+主要是2个命令：
+
+* `TODO-Highlight: Toggle highlight` : 启动/关闭 相关标记的高亮显示
+* `TODO-Highlight: List highlight annotations` :  在下方的OUTPUT窗口中显示所有标记 
+
+`DEBUG`  、`TODO` 是两个内置的标记，其他的需要自己配置
 
 #### Code Runner
 

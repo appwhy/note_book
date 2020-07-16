@@ -60,3 +60,23 @@ make install
 ```
 
 这样就能将screen安装到screen_dir目录下了。接着在.bashrc文件里设置screen执行路径，加入export PATH=/home/username/screen_dir/bin:$PATH，接着执行source .bashrc更新PATH，在终端输入screen就能进入screen界面了。
+
+### java jdk
+
+非root用户安装java。
+
+将下载好的tar包进行解压，然后进行配置文件，在命令行敲入  vi ~/.bashrc，在这个文件中配置java的路径，添加以下：
+
+配置 `~/.bashrc` 文件：
+
+```bash
+export JAVA_HOME=/path/to//jdk
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH   
+```
+
+
+
+
+

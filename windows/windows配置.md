@@ -378,5 +378,30 @@ win10 文件夹预览文件功能开启：点击 [文件, 主页, 共享, 查看
 
 4. 关闭注册表，此时就能预览py文件了。对其他文件同意有效
 
+## vscode 生成 UML图形
 
+参考：[link](https://ephen.me/2017/VSCode_PlantUML/)
 
+1. 安装java jdk
+2. 安装 GraphViz 程序：[link](https://graphviz.org/_pages/Download/Download_windows.html) ，将bin目录添加进path环境变量
+3. 配置 Dot脚本环境， 配置环境变量 `GRAPHVIZ_DOT=xx\bin\dot.exe`
+4. VSCode 需要安装两个插件： `PlantUML` 和 `Graphviz Preview`
+5. VSCode设置： `graphviz-preview.dotPath": "D:/program files/Graphviz/bin/dot.exe`
+
+编写代码：
+
+```
+@startuml
+
+[*] --> State1
+State1 --> [*]
+State1 : this is a string
+State1 : this is another string
+
+State1 -> State2
+State2 --> [*]
+
+@enduml
+```
+
+`Alt+D` : 渲染代码，得到UML图片。
