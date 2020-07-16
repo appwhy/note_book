@@ -22,6 +22,7 @@
 ---
 
 * other
+  * [mysql](other/mysql.md)
   * [vscode](other/vscode.md)
   * [快速搭建http服务](other/快速搭建http服务.md)
   * [谷歌浏览器](other/谷歌浏览器.md)
