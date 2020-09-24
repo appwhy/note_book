@@ -284,10 +284,59 @@ git reset --soft HEAD^    # --soft表示只重置HEAD，--hard则重置HEAD，�
 比如我在A分支做了一些修改，现在由于某种原因(如A分支已经合并到master)，不能把A分支上修改的东西保留下来但是需要把A分支上修改的东西继续在新分支继续修改。那么现在我们可以有两种简单的做法完成这一需求。
 
 1. 我们不需要在A分支做commit，只需要在A分支新建B分支，然后切换过去。这个时候你会发现修改的东西在A，B分支都有。这个时候在B分支commit，那么这些修改保留在B分支上，再切换到A分支上会发现修改都没有保留下来。
-
 2. 使用`git stash` 将A分支暂存起来，然后在某一个分支（如master分支）新建一个分支B，然后在B分支上使用 `git stash pop` 将修改弹出到B分支上，然后这些修改就在B分支上了。
 
 
+
+
+
+## 本地新建分支推送到远程仓库
+
+```bash
+git checkout -b new_branch
+git push --set-upstream origin new_branch
+```
+
+
+
+## 创建sub-module
+
+子模块允许你将一个 Git 仓库作为另一个 Git 仓库的子目录。 它能让你将另一个仓库克隆到自己的项目中，同时还保持提交的独立。
+
+在父仓库目录下执行以下命令, 将某个子仓库克隆下来，放在sub_module目录下。
+
+```bash
+git submodule add https://xxx.git sub_module
+```
+
+成功执行上条命令后，会在父仓库根目录下生成一个 `.gitmodules` 文件，里面是一些对子仓库的描述信息。
+
+
+
+如果要克隆一个带有子仓库的仓库，子项目不会自动随父项目克隆出来，需要在父项目克隆下来之后，执行以下命令：
+
+```
+
+```
+
+
+
+## 查看某次commit的内容
+
+```bash
+git log  # 展示该分支上的所有提交的commit_id和comment
+
+git show commit_id  # 查看某次commit的内容
+
+git blame -L 10,20 file_name  # 查看某文件的第10到20行的提交历史
+```
+
+
+
+```bash
+# 删除某个本地分支
+git branch -D test_branch
+```
 
 
 

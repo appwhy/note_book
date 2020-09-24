@@ -405,3 +405,13 @@ State2 --> [*]
 ```
 
 `Alt+D` : 渲染代码，得到UML图片。
+
+## 其他软件
+
+Navicat Premium 12是一套数据库开发管理工具，支持链家MySQL、Oracle、SQL server等多种数据库，快速便捷创建、管理和维护数据库
+
+Visio2016（画流程图、时序图等）
+
+FreeMind（画思维导图）
+
+SourceInsight（代码阅读工具）

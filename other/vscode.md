@@ -85,6 +85,10 @@ VS Code 自带了 TypeScript 和 Node.js 的支持。也就是说，你在书写
 - `Ctrl+Backspace`：删除光标前一个单词
 - `Ctrl+Delete`：删除光标后面的一个单词
 
+
+
+* `Alt+←` ： 返回光标上一次所在的位置。
+
 ## 多光标编辑
 
 `Shift + ←/↑/→/↓` : 选择块
