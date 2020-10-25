@@ -311,12 +311,29 @@ git submodule add https://xxx.git sub_module
 
 成功执行上条命令后，会在父仓库根目录下生成一个 `.gitmodules` 文件，里面是一些对子仓库的描述信息。
 
+此外，查看`.git/config`配置文件，可以发现submodule的香港 配置。
+
 
 
 如果要克隆一个带有子仓库的仓库，子项目不会自动随父项目克隆出来，需要在父项目克隆下来之后，执行以下命令：
 
+```bash
+# 用来初始化本地配置文件
+git submodule init
+# 从该项目中抓取所有数据并检出父项目中列出的合适的提交(指定的提交)。
+git submodule update
+
+#以上两条命令也可以合并成一条组合命令
+git submodule update --init --recursive
+
+# clone 父仓库的时候加上 --recursive，会自动初始化并更新仓库中的每一个子模块
 ```
 
+
+
+```bash
+# 不加 --remote 会切换到 .submodule 里记录的 SHA1 所在的 commit 节点，加 --remote 则会切换到 submodule 里定义的追踪的分支，默认是 master。
+git submodule update --remote
 ```
 
 
@@ -338,15 +355,42 @@ git blame -L 10,20 file_name  # 查看某文件的第10到20行的提交历史
 git branch -D test_branch
 ```
 
+## 查看某一行代码的修改历史
+
+查看某行代码谁写的：
+
+```bash
+git blame file_name
+git blame -L 58,100 file_name  # 58~100 行代码
+```
+
+其输出格式为：
+
+```bash
+commit_ID | 代码提交作者 | 提交时间 | 代码位于文件中的行数 | 实际代码 
+```
+
+根据 commit_ID 可以查看对应的提交记录：
+
+```bash
+git show commit_ID
+```
 
 
 
+## git拉取指定远程分支
 
+直接拉取：
 
+```bash
+git clone -b 远程分支名  仓库地址
+```
 
+本地已有相关仓库代码：
 
-
-
+```bash
+git checkout -b 本地分支 origin/远程分支
+```
 
 
 

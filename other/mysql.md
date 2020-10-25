@@ -54,6 +54,22 @@ nopager命令：取消pager设置，恢复之前的输出状态。（如果不�
 
 
 
+ubuntu下mysql不显示当前数据库名称：
+
+```python
+# 短期生效：执行mysql命令时添加下面参数
+--prompt="\u(\d) >"
+
+# 长期生效：修改配置my.cnf，然后重启mysql
+[mysql]
+default-character-set = utf8
+prompt = MariaDB <\u> [\d] >
+```
+
+
+
+
+
 ## 基础知识
 
 登陆mysql：`mysql -h127.0.0.1 -P3306 -uroot -ppassword`
@@ -161,7 +177,7 @@ mysql数据库服务器有三个数据库：
 * `profiling` : 分析表描述了语句分析信息；其内容对应于显示配置文件生成的信息并显示配置文件。
 * `referential_constraints` : 描述了外键的约束信息，可以查看外键约束。
 * `routines` : 这个表提供了存储子程序(存储程序和函数)的信息。此时，routines表不包含自定义函数(udf)。名为“mysql.proc name”的列指明了对应于information_schema.routines表的mysql.proc表列，如果有的话。
-* `schemata` : 提供了有关数据库的信息。
+* **`schemata` : 提供了有关数据库的信息。**
 * `schema_privileges` : 方案权限表，给出了方案权限的信息。
 * `session_status` : 描述了有关服务器会话变量状态信息，它对应于显示有关会话状态的信息。
 * `session_variables` : 提供有关服务器会话变量值信息，它对应于显示有关会话值的信息。
