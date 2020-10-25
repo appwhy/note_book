@@ -199,7 +199,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="../centos/其他命令.html">
+        <li class="chapter " data-level="1.2.5" data-path="../centos/vim.html">
+            
+                <a href="../centos/vim.html">
+            
+                    
+                    vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../centos/其他命令.html">
             
                 <a href="../centos/其他命令.html">
             
@@ -212,7 +225,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="../centos/问题集合.html">
+        <li class="chapter " data-level="1.2.7" data-path="../centos/问题集合.html">
             
                 <a href="../centos/问题集合.html">
             
@@ -362,7 +375,20 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.4" data-path="vscode.html">
+        <li class="chapter " data-level="4.1.4" data-path="vagrant.html">
+            
+                <a href="vagrant.html">
+            
+                    
+                    vagrant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="vscode.html">
             
                 <a href="vscode.html">
             
@@ -375,7 +401,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.5" data-path="快速搭建http服务.html">
+        <li class="chapter " data-level="4.1.6" data-path="快速搭建http服务.html">
             
                 <a href="快速搭建http服务.html">
             
@@ -388,7 +414,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.6" data-path="谷歌浏览器.html">
+        <li class="chapter " data-level="4.1.7" data-path="谷歌浏览器.html">
             
                 <a href="谷歌浏览器.html">
             
@@ -562,6 +588,15 @@ select table_schema, table_name, column_name from information_schema.columns whe
 <p>pager&#x7528;&#x6CD5;&#xFF1A;&#x5B9E;&#x9645;&#x4E0A;&#x7B49;&#x4E8E;&#x5C06;&#x5B83;&#x8BBE;&#x7F6E;&#x4EE5;&#x540E;&#x7684;&#x6240;&#x6709;mysql&#x64CD;&#x4F5C;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x901A;&#x8FC7;pager&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;&#x6267;&#x884C;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7BA1;&#x9053;&#x7B26;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
 <p><code>pager linux_bash_cmd</code></p>
 <p>nopager&#x547D;&#x4EE4;&#xFF1A;&#x53D6;&#x6D88;pager&#x8BBE;&#x7F6E;&#xFF0C;&#x6062;&#x590D;&#x4E4B;&#x524D;&#x7684;&#x8F93;&#x51FA;&#x72B6;&#x6001;&#x3002;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;nopager&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x91CD;&#x542F;mysql&#x670D;&#x52A1;&#x624D;&#x80FD;&#x6062;&#x590D;&#x4E86;&#xFF09;</p>
+<p>ubuntu&#x4E0B;mysql&#x4E0D;&#x663E;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x77ED;&#x671F;&#x751F;&#x6548;&#xFF1A;&#x6267;&#x884C;mysql&#x547D;&#x4EE4;&#x65F6;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x53C2;&#x6570;</span>
+<span class="token operator">-</span><span class="token operator">-</span>prompt<span class="token operator">=</span><span class="token string">&quot;\u(\d) &gt;&quot;</span>
+
+<span class="token comment"># &#x957F;&#x671F;&#x751F;&#x6548;&#xFF1A;&#x4FEE;&#x6539;&#x914D;&#x7F6E;my.cnf&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x542F;mysql</span>
+<span class="token punctuation">[</span>mysql<span class="token punctuation">]</span>
+default<span class="token operator">-</span>character<span class="token operator">-</span><span class="token builtin">set</span> <span class="token operator">=</span> utf8
+prompt <span class="token operator">=</span> MariaDB <span class="token operator">&lt;</span>\u<span class="token operator">&gt;</span> <span class="token punctuation">[</span>\d<span class="token punctuation">]</span> <span class="token operator">&gt;</span>
+</code></pre>
 <h2 id="&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><a name="&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x57FA;&#x7840;&#x77E5;&#x8BC6;</h2>
 <p>&#x767B;&#x9646;mysql&#xFF1A;<code>mysql -h127.0.0.1 -P3306 -uroot -ppassword</code></p>
 <p>&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x4F3C;&#x67E5;&#x8BE2;&#xFF1A; <code>where name like &quot;%xxx%&quot; ;</code></p>
@@ -641,7 +676,7 @@ EOF</span>
 <li><code>profiling</code> : &#x5206;&#x6790;&#x8868;&#x63CF;&#x8FF0;&#x4E86;&#x8BED;&#x53E5;&#x5206;&#x6790;&#x4FE1;&#x606F;&#xFF1B;&#x5176;&#x5185;&#x5BB9;&#x5BF9;&#x5E94;&#x4E8E;&#x663E;&#x793A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x751F;&#x6210;&#x7684;&#x4FE1;&#x606F;&#x5E76;&#x663E;&#x793A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</li>
 <li><code>referential_constraints</code> : &#x63CF;&#x8FF0;&#x4E86;&#x5916;&#x952E;&#x7684;&#x7EA6;&#x675F;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5916;&#x952E;&#x7EA6;&#x675F;&#x3002;</li>
 <li><code>routines</code> : &#x8FD9;&#x4E2A;&#x8868;&#x63D0;&#x4F9B;&#x4E86;&#x5B58;&#x50A8;&#x5B50;&#x7A0B;&#x5E8F;(&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x548C;&#x51FD;&#x6570;)&#x7684;&#x4FE1;&#x606F;&#x3002;&#x6B64;&#x65F6;&#xFF0C;routines&#x8868;&#x4E0D;&#x5305;&#x542B;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;(udf)&#x3002;&#x540D;&#x4E3A;&#x201C;mysql.proc name&#x201D;&#x7684;&#x5217;&#x6307;&#x660E;&#x4E86;&#x5BF9;&#x5E94;&#x4E8E;information_schema.routines&#x8868;&#x7684;mysql.proc&#x8868;&#x5217;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;</li>
-<li><code>schemata</code> : &#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x5173;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li><strong><code>schemata</code> : &#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x5173;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4FE1;&#x606F;&#x3002;</strong></li>
 <li><code>schema_privileges</code> : &#x65B9;&#x6848;&#x6743;&#x9650;&#x8868;&#xFF0C;&#x7ED9;&#x51FA;&#x4E86;&#x65B9;&#x6848;&#x6743;&#x9650;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
 <li><code>session_status</code> : &#x63CF;&#x8FF0;&#x4E86;&#x6709;&#x5173;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8BDD;&#x53D8;&#x91CF;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x5BF9;&#x5E94;&#x4E8E;&#x663E;&#x793A;&#x6709;&#x5173;&#x4F1A;&#x8BDD;&#x72B6;&#x6001;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
 <li><code>session_variables</code> : &#x63D0;&#x4F9B;&#x6709;&#x5173;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8BDD;&#x53D8;&#x91CF;&#x503C;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x5BF9;&#x5E94;&#x4E8E;&#x663E;&#x793A;&#x6709;&#x5173;&#x4F1A;&#x8BDD;&#x503C;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
@@ -654,7 +689,7 @@ EOF</span>
 <li><code>views</code> : &#x8868;&#x7ED9;&#x51FA;&#x4E86;&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x89C6;&#x56FE;&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright @appwhy all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x4E8E;&#xFF1A;
-2020-09-24 21:10:52
+2020-10-23 16:33:24
 </span></footer>
                                 
                                 </section>
@@ -694,7 +729,7 @@ EOF</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mysql","level":"4.1.1","depth":2,"next":{"title":"php","level":"4.1.2","depth":2,"path":"other/php.md","ref":"other/php.md","articles":[]},"previous":{"title":"other","level":"4.1","depth":1,"ref":"","articles":[{"title":"mysql","level":"4.1.1","depth":2,"path":"other/mysql.md","ref":"other/mysql.md","articles":[]},{"title":"php","level":"4.1.2","depth":2,"path":"other/php.md","ref":"other/php.md","articles":[]},{"title":"tmux","level":"4.1.3","depth":2,"path":"other/tmux.md","ref":"other/tmux.md","articles":[]},{"title":"vscode","level":"4.1.4","depth":2,"path":"other/vscode.md","ref":"other/vscode.md","articles":[]},{"title":"快速搭建http服务","level":"4.1.5","depth":2,"path":"other/快速搭建http服务.md","ref":"other/快速搭建http服务.md","articles":[]},{"title":"谷歌浏览器","level":"4.1.6","depth":2,"path":"other/谷歌浏览器.md","ref":"other/谷歌浏览器.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"other/mysql.md","mtime":"2020-09-24T13:10:52.479Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-24T13:18:52.483Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mysql","level":"4.1.1","depth":2,"next":{"title":"php","level":"4.1.2","depth":2,"path":"other/php.md","ref":"other/php.md","articles":[]},"previous":{"title":"other","level":"4.1","depth":1,"ref":"","articles":[{"title":"mysql","level":"4.1.1","depth":2,"path":"other/mysql.md","ref":"other/mysql.md","articles":[]},{"title":"php","level":"4.1.2","depth":2,"path":"other/php.md","ref":"other/php.md","articles":[]},{"title":"tmux","level":"4.1.3","depth":2,"path":"other/tmux.md","ref":"other/tmux.md","articles":[]},{"title":"vagrant","level":"4.1.4","depth":2,"path":"other/vagrant.md","ref":"other/vagrant.md","articles":[]},{"title":"vscode","level":"4.1.5","depth":2,"path":"other/vscode.md","ref":"other/vscode.md","articles":[]},{"title":"快速搭建http服务","level":"4.1.6","depth":2,"path":"other/快速搭建http服务.md","ref":"other/快速搭建http服务.md","articles":[]},{"title":"谷歌浏览器","level":"4.1.7","depth":2,"path":"other/谷歌浏览器.md","ref":"other/谷歌浏览器.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"other/mysql.md","mtime":"2020-10-23T08:33:24.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-25T09:32:24.366Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

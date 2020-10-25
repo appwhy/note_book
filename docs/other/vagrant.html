@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>快速搭建http服务 · note_book</title>
+        <title>vagrant · note_book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="谷歌浏览器.html" />
+    <link rel="next" href="vscode.html" />
     
     
-    <link rel="prev" href="vscode.html" />
+    <link rel="prev" href="tmux.html" />
     
 
     </head>
@@ -377,7 +377,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.4" data-path="vagrant.html">
+        <li class="chapter active" data-level="4.1.4" data-path="vagrant.html">
             
                 <a href="vagrant.html">
             
@@ -403,7 +403,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.1.6" data-path="快速搭建http服务.html">
+        <li class="chapter " data-level="4.1.6" data-path="快速搭建http服务.html">
             
                 <a href="快速搭建http服务.html">
             
@@ -516,7 +516,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >快速搭建http服务</a>
+        <a href=".." >vagrant</a>
     </h1>
 </div>
 
@@ -531,44 +531,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;"><b>1. </b>&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;1&#xFF1A;-python&#x81EA;&#x5E26;&#x670D;&#x52A1;"><b>1.1. </b>&#x65B9;&#x6CD5;1&#xFF1A; python&#x81EA;&#x5E26;&#x670D;&#x52A1;</a></li><ul><li><span class="title-icon "></span><a href="#python2"><b>1.1.1. </b>python2</a></li><li><span class="title-icon "></span><a href="#python3"><b>1.1.2. </b>python3</a></li></ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;2&#xFF1A;jupyter-notebook"><b>1.2. </b>&#x65B9;&#x6CD5;2&#xFF1A;jupyter notebook</a></li><ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server"><b>1.2.1. </b>&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server</a></li></ul></ul></ul></div><a href="#&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;"><a name="&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5FEB;&#x901F;&#x642D;&#x5EFA;http&#x670D;&#x52A1;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vagrant"><b>1. </b>vagrant</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;"><b>1.1. </b>&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>1.2. </b>&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li></ul></ul></div><a href="#vagrant" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vagrant"><a name="vagrant" class="anchor-navigation-ex-anchor" href="#vagrant"><i class="fa fa-link" aria-hidden="true"></i></a>1. vagrant</h1>
 <p>[TOC]</p>
 <!-- toc -->
 <ul>
-<li><a href="#%E6%96%B9%E6%B3%951-python%E8%87%AA%E5%B8%A6%E6%9C%8D%E5%8A%A1">&#x65B9;&#x6CD5;1&#xFF1A; python&#x81EA;&#x5E26;&#x670D;&#x52A1;</a><ul>
-<li><a href="#python2">python2</a></li>
-<li><a href="#python3">python3</a></li>
-</ul>
-</li>
-<li><a href="#%E6%96%B9%E6%B3%952jupyter-notebook">&#x65B9;&#x6CD5;2&#xFF1A;<code>jupyter notebook</code></a><ul>
-<li><a href="#%E6%96%B9%E6%B3%953nodejs%E7%9A%84http-server">&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server</a></li>
-</ul>
-</li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA">&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li>
 </ul>
 <!-- tocstop -->
 <hr>
-<p>&#x6709;&#x65F6;&#x60F3;&#x8981;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x6D4F;&#x89C8;linux&#x4E0A;&#x7684;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x5728;linux&#x4E0A;&#x8FD0;&#x884C;http&#x670D;&#x52A1;&#x3002;</p>
-<h2 id="&#x65B9;&#x6CD5;1&#xFF1A;-python&#x81EA;&#x5E26;&#x670D;&#x52A1;"><a name="&#x65B9;&#x6CD5;1&#xFF1A;-python&#x81EA;&#x5E26;&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;1&#xFF1A;-python&#x81EA;&#x5E26;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x65B9;&#x6CD5;1&#xFF1A; python&#x81EA;&#x5E26;&#x670D;&#x52A1;</h2>
-<h3 id="python2"><a name="python2" class="anchor-navigation-ex-anchor" href="#python2"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. python2</h3>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5FEB;&#x901F;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;http&#x670D;&#x52A1;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">python -m SimpleHTTPServer port
-</code></pre>
-<p>&#x6CE8;&#xFF1A;SimpleHTTPServer&#x662F;linux&#x673A;&#x5668;&#x4E0A;python2&#x81EA;&#x5E26;&#x7684;&#x4E00;&#x4E2A;WEB&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5B89;&#x88C5;&#x3002;</p>
-<h3 id="python3"><a name="python3" class="anchor-navigation-ex-anchor" href="#python3"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. python3</h3>
-<pre class="language-"><code class="lang-bash">python -m  http.server <span class="token number">8000</span>
-</code></pre>
-<h2 id="&#x65B9;&#x6CD5;2&#xFF1A;jupyter-notebook"><a name="&#x65B9;&#x6CD5;2&#xFF1A;jupyter-notebook" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;2&#xFF1A;jupyter-notebook"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x65B9;&#x6CD5;2&#xFF1A;jupyter notebook</h2>
-<p>&#x4F7F;&#x7528;python&#x5B89;&#x88C5;jupyter&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8;notebook&#x670D;&#x52A1;&#x3002;</p>
-<h3 id="&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server"><a name="&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x65B9;&#x6CD5;3&#xFF1A;nodejs&#x7684;http-server</h3>
-<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5728;linux&#x4E0A;&#x5B89;&#x88C5;nodejs&#xFF0C;&#x5982;&#x679C;&#x662F;&#x975E;root&#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5BF9;&#x5E94;&#x7684;bin&#x76EE;&#x5F55;&#x6DFB;&#x52A0;&#x5230;PATH&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#xFF08;&#x4E0D;&#x5C06;&#x5176;&#x52A0;&#x5165;PATH&#x53D8;&#x91CF;&#xFF0C;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x9519;&#xFF09;</p>
-<p>&#x7136;&#x540E;&#x5B89;&#x88C5; http-server &#xFF1A;</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">npm</span> <span class="token function">install</span> -g http-server
-</code></pre>
-<p>&#x542F;&#x52A8;http&#x670D;&#x52A1;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">http-server -p <span class="token number">8000</span>
+<p>vagrant&#x4E3B;&#x8981;&#x7528;&#x6765;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#xFF0C; &#x4E00;&#x822C;&#x548C;virtual box&#x914D;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;vagrant&#xFF08;&#x53EA;&#x6709;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x65E0;&#x56FE;&#x5F62;&#x754C;&#x9762;&#xFF09;&#x548C;virtual box&#x3002;</p>
+<p>&#x67E5;&#x770B;vagrant&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF1A; <code>vagrant version</code></p>
+<h2 id="&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;"><a name="&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x521B;&#x5EFA;&#x865A;&#x62DF;&#x673A;</h2>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#xFF1A;<code>vagrant init centos/7</code> &#xFF0C; &#x4F7F;&#x7528;centos7&#x521D;&#x59CB;&#x5316;</p>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#x5747;&#x5728;&#x5B89;&#x88C5;&#x955C;&#x50CF;&#x7684;&#x90A3;&#x4E2A;&#x76EE;&#x5F55;&#xFF08;&#x6709;Vagrantfile&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#xFF09;&#x8FD0;&#x884C;</span>
+
+<span class="token comment"># &#x5B89;&#x88C5;&#x53CA;&#x542F;&#x52A8;&#x865A;&#x62DF;&#x673A;</span>
+vagrant up
+
+<span class="token comment"># &#x767B;&#x5F55;&#x8FDB;&#x5165;&#x865A;&#x62DF;&#x673A;&#x7684;&#x63A7;&#x5236;&#x53F0;,&#x8FDB;&#x5165;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x548C;&#x64CD;&#x4F5C;&#x4E00;&#x53F0;linux&#x673A;&#x5668;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002; user:vagrant pwd: vagrant</span>
+vagrant <span class="token function">ssh</span>
+
+<span class="token comment"># &#x505C;&#x6B62;&#x8FD9;&#x53F0;&#x865A;&#x62DF;&#x673A;</span>
+vagrant <span class="token function">halt</span>
+
+<span class="token comment"># &#x9500;&#x6BC1;&#x8FD9;&#x53F0;&#x865A;&#x62DF;&#x673A;</span>
+vagrant destroy
+
+<span class="token comment"># &#x5C06;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x865A;&#x62DF;&#x673A;&#x5B9E;&#x4F8B;&#x6253;&#x5305;&#x6210;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;box&#x540E;&#x7F00;&#x7ED3;&#x5C3E;</span>
+vagrant package
+
+<span class="token comment"># &#x4F7F;&#x7528;box&#x6587;&#x4EF6;</span>
+vagrant box <span class="token function">add</span> <span class="token string">&apos;&#x81EA;&#x5B9A;&#x4E49;&#x540D;&#x79F0;&apos;</span> xx.box
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright @appwhy all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x4E8E;&#xFF1A;
-2020-06-18 19:31:30
+2020-10-23 16:45:15
 </span></footer>
                                 
                                 </section>
@@ -596,12 +595,12 @@
 
             
                 
-                <a href="vscode.html" class="navigation navigation-prev " aria-label="Previous page: vscode">
+                <a href="tmux.html" class="navigation navigation-prev " aria-label="Previous page: tmux">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="谷歌浏览器.html" class="navigation navigation-next " aria-label="Next page: 谷歌浏览器">
+                <a href="vscode.html" class="navigation navigation-next " aria-label="Next page: vscode">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -612,7 +611,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速搭建http服务","level":"4.1.6","depth":2,"next":{"title":"谷歌浏览器","level":"4.1.7","depth":2,"path":"other/谷歌浏览器.md","ref":"other/谷歌浏览器.md","articles":[]},"previous":{"title":"vscode","level":"4.1.5","depth":2,"path":"other/vscode.md","ref":"other/vscode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"other/快速搭建http服务.md","mtime":"2020-06-18T11:31:30.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-25T09:32:24.366Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vagrant","level":"4.1.4","depth":2,"next":{"title":"vscode","level":"4.1.5","depth":2,"path":"other/vscode.md","ref":"other/vscode.md","articles":[]},"previous":{"title":"tmux","level":"4.1.3","depth":2,"path":"other/tmux.md","ref":"other/tmux.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","-highlight","prism","prism-themes","code","github","mermaid-gb3","splitter","anchor-navigation-ex","3-ba","splitter","simple-page-toc","tbfed-pagefooter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright @appwhy","modify_label":"文件更新于：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/appwhy"},"simple-page-toc":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism-themes":{},"3-ba":{"configuration":"auto","token":"20b05c51dc78c5786b84d16d003150ac"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"appwhy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRO.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"note_book","language":"zh-hans","links":{"sidebar":{"Home":"https://github.com/appwhy"}},"gitbook":"*","description":"记录编程相关"},"file":{"path":"other/vagrant.md","mtime":"2020-10-23T08:45:15.493Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-25T09:32:24.366Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
