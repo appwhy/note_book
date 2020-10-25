@@ -7,6 +7,7 @@
   * [linux常用命令](centos/linux常用命令.md)
   * [linux技巧](centos/linux技巧.md)
   * [linux知识点](centos/linux知识点.md)
+  * [vim](centos/vim.md)
   * [其他命令](centos/其他命令.md)
   * [问题集合](centos/问题集合.md)
 
@@ -26,6 +27,7 @@
   * [mysql](other/mysql.md)
   * [php](other/php.md)
   * [tmux](other/tmux.md)
+  * [vagrant](other/vagrant.md)
   * [vscode](other/vscode.md)
   * [快速搭建http服务](other/快速搭建http服务.md)
   * [谷歌浏览器](other/谷歌浏览器.md)
