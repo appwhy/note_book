@@ -97,16 +97,49 @@ show 的用法：
 * `desc xxx` ： 显示table的所有字段
 * `show grants` : 查看当前用户的所有权限
 
+## 字符串操作
+
+以下index均从1开始
+
+* `left(str,index)` : 从左边第index开始截取
+* `right(str,index)` : 从右边第index开始截取
+* `substr(str,index)` : 当index>0从左边开始截取直到结束；当index<0从右边开始截取直到结束；当index=0返回空
+* `substr(str,index,len)` : 截取str,从index开始，截取len长度。
 
 
-## 数据库备份
+
+字符串长度： `char_length(str)` ， 
+
+
+
+查找全是数字的字符串： `select * from sns5 where username regexp '^[0-9]+$' ;`
+
+
+
+
+
+
+
+## 类型转换
+
+字符串 -> 数字：
+
+* 在字符串后加0：`'123'+0`
+* cast函数： `cast('5.43' as decimal(50,15))`, `cast('555' as signed)`
+* convert函数 ：`convert('1243', signed)`
+
+数字 -> 字符串：
+
+* convert函数 ：`convert(1243, char)`
+
+## mysqldump：数据库备份
 
 ```bash
 # 将dbname备份到backdb.sql中
 mysqldump -uroot -hhost -p dbname > backdb.sql
 
 # 备份数据表tb_1, tb_2
-mysqldump -u root -h host -p dbname tb_1, tb_2 > backdb.sql
+mysqldump -u root -h host -p dbname tb_1 tb_2 > backdb.sql
 
 # 备份多个数据库
 mysqldump -u root -h host -p --databases dbname1 dbname2 > backdb.sql
@@ -114,6 +147,11 @@ mysqldump -u root -h host -p --databases dbname1 dbname2 > backdb.sql
 # 恢复数据
 mysql -u root –password=root密码 数据库名 < 备份文件.sql
 ```
+
+其他参数：
+
+* `-d` / `--no-data`：不dump数据，只dump表结构
+* `--databases db1 db2 ...`：dump多个数据库
 
 
 

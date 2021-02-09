@@ -407,70 +407,45 @@ PYTHONPATH="${workspaceFolder}"
 
 
 
-## 插件
+## 修改窗口顶部的标题名字
 
-- Python Docstring Generator : Python注释自动生成：`Ctrl+Shift+2`
+由于默认配置会显示当前打开的文件，这个很影响我。
 
-- vscode-icons： 这是一个美化VS Code图标的插件。
+使用配置中的属性：`window.title`，将它的值改为`${rootName}`（只显示项目名称）
 
-- git插件：
-  - GitLens
-  - Git History
-  - Git Graph
+## C/C++
 
-#### 更强大的自动补全
+在`.vscode`目录下应创建 3个文件 ：
 
-搜索Kite。然后需要安装一个叫 [Kite Engine](https://link.zhihu.com/?target=https%3A//kite.com/) 的软件，直接前往官网下载对应的系统版本即可：
+- `tasks.json` (compiler build settings)
+- `launch.json` (debugger settings)
+- `c_cpp_properties.json` (compiler path and IntelliSense settings)
 
-#### TabNine
 
-基于GPT-2语言模型的自动补全工具。
 
-传统的补全工具更多的是根据上下文信息和第三方库进行补全，换句话说就是基于**既有**的内容进行补全。而TabNine更多的是偏向**推理**，它能够根据开发者前面输入的内容快速推理接下来要输入的代码，甚至参数、字符串、符号它都能够准确的推理并补全。
 
-#### Bookmarks
 
-常用命令：
 
-* `Bookmarks: Toggle` :  添加书签。快捷键 `Ctrl+Alt+K`
-* `Bookmarks: Toggle Labled` : 为书签添加别名，显示时就不会显示代码，而是别名。
-* `Bookmarks: List` :  列出当前文件的书签
-* `Bookmarks: List from All Files` :  列出所有文件的书签
-* `Bookmarks: Focus on Explorer View` : 在左边的侧边栏显示所有书签
-* `Bookmarks: Clear` : 清除当前文件的书签
-* `Bookmarks: Clear from All Files` : 慎用
 
-#### TODO Highlight
 
-我们在开发过程中，有时会为了测试或某种原因，某段代码需要之后进行修改和完善。如果就不做一些标记，时间久了、需要修改的多了，就很难区分出哪些是需要修改的、哪些是不需要修改的。因此养成做标记的好习惯对提升开发效率具有很大的帮助。
 
-配置可以写在 `User` 级别上，可以全局应用。
 
-主要是2个命令：
 
-* `TODO-Highlight: Toggle highlight` : 启动/关闭 相关标记的高亮显示
-* `TODO-Highlight: List highlight annotations` :  在下方的OUTPUT窗口中显示所有标记 
 
-`DEBUG`  、`TODO` 是两个内置的标记，其他的需要自己配置
 
-#### Code Runner
 
-这是一款支持C、C++、Java、Python等主流编程语言快速运行的插件，它能够便捷的运行当前活动页代码文件、能够运行选定代码段、运行自定义命令，对于调试代码具有很大的帮助。
 
-#### 文件及文件夹图标
 
-默认的VSCode图标没有那么详细，只有几个重要文件类型的图标提示，可以安装vscode-icons解决，
 
-#### 生成注释格式
 
-docstring，由Nils Werner开发的autoDocstring，
 
-#### 画图: Plantuml，Graphviz，Drawio
 
-Plantuml我主要用来绘制流程图，时序图，非常强大，这两种图用代码描述起来直观方便，有时也能替代一些思考过程。
-Drawio绘制一些复杂的图，像一些教材上的那种展示图，比如《深入理解Linux内核》中那些数据结构的图片，用Plantuml就难以绘制。但使用Drawio加上自带手绘风格，比较漂亮，对标Visio
 
-Graphviz一般是在代码中自动生成的的，展示一些数据流，Profile结果什么的，基本上不会去手动写。
 
-#### json插件：pretty json
+
+
+
+
+
+
 
