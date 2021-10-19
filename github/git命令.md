@@ -396,5 +396,19 @@ git checkout -b 本地分支 origin/远程分支
 
 
 
+### git创建新的空分支
+
+```bash
+# 该命令会生成一个叫2.0.2的分支，该分支会包含父分支的所有文件。但新的分支不会指向任何以前的提交，就是它没有历史，如果你提交当前内容，那么这次提交就是这个分支的首次提交。
+git checkout --orphan 2.0.2
+
+# 移除所有文件
+git rm -rf .
+
+# 提交
+git commit -m 'new branch'
+git push origin 2.0.2
+```
+
 
 

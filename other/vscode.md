@@ -398,6 +398,10 @@ PYTHONPATH="${workspaceFolder}"
 
 
 
+
+
+
+
 ## 常用占位符
 
 * `${workspaceFolder}` ：项目根目录（VS Code打开的目录）
@@ -423,13 +427,20 @@ PYTHONPATH="${workspaceFolder}"
 
 
 
+## Terminal
+
+实现选中即复制，单击邮件是粘贴：
+
+```
+"terminal.integrated.copyOnSelection": true,
+"terminal.integrated.rightClickBehavior": "paste"
+```
 
 
 
 
 
-
-
+F11：全屏与退出全屏
 
 
 

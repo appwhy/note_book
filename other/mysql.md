@@ -146,12 +146,15 @@ mysqldump -u root -h host -p --databases dbname1 dbname2 > backdb.sql
 
 # 恢复数据
 mysql -u root –password=root密码 数据库名 < 备份文件.sql
+
+# 只dump数据表（没有数据）， 并将AUTO_INCREMENT去除
+mysqldump -h 127.0.0.1 -u username -p --no-data -B db | sed 's/AUTO_INCREMENT\s*=\s*[0-9]*\s//g' > db.sql
 ```
 
 其他参数：
 
 * `-d` / `--no-data`：不dump数据，只dump表结构
-* `--databases db1 db2 ...`：dump多个数据库
+* `-B db1 db2 ...` / `--databases db1 db2 ...`：dump多个数据库
 
 
 
@@ -162,6 +165,9 @@ MySQL查询结果保存到本地：
 mysql -h<公网IP> -P<端口号> -u<用户名> -p<密码> -D<指定数据库> >local.sql <<EOF 
 select * from table_name
 EOF
+
+
+mysql -h<公网IP> -P<端口号> -u<用户名> -p<密码> -D<指定数据库> --execute "sql语句"
 ```
 
 
@@ -185,6 +191,10 @@ $号含义：
 在命令窗口输入 `sqlplus / as sysdba` 后回车，即可连接到Oracle。登录时，采用的是操作系统验证的方式，所以用户名/密码输与不输入是一样的。
 
 
+
+## 坑点
+
+在mysql中做字符串与数字的比较时，会自动从第一个非数字的字符开始截断，将截断点前的字符串转换为数字，继而进行比较。
 
 ## 自带数据库
 
