@@ -1,0 +1,72 @@
+{
+    "remote.SSH.remotePlatform": {
+        "127.0.0.1": "linux",
+    },
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
+    "debug.console.fontSize": 18,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.iconTheme": "vscode-icons",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 500,
+    "todohighlight.include": [
+        "**/*.py",
+    ],
+    "todohighlight.exclude": [
+        "**/venv/**",
+    ],
+    "todohighlight.keywords": [
+        "debug:",
+        {
+            "text": "review:",
+            // "color": "grey",
+            "backgroundColor": "green",
+            // "overviewRulerColor": "grey"
+        }
+    ],
+    "todohighlight.isEnable": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.enabled": false,
+    "debug.toolBarLocation": "docked",
+    "diffEditor.renderSideBySide": true,
+
+    // 自动去除行末空格
+    "files.trimTrailingWhitespace": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "output.smartScroll.enabled": true,
+    "git.ignoreWindowsGit27Warning": true,
+    "dashboard.projectData": null,
+    "window.title": "${rootName}",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "paste",
+    "python.languageServer": "Pylance",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.csv": "default"      // csv 不使用office viewer进行查看
+    },
+    "python.defaultInterpreterPath": "/data/home/ganghuang/.venv/venv36/bin/python",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false
+    },
+    "files.associations": {
+        "*.json": "json5"
+    },
+    "diffEditor.wordWrap": "off",
+}
