@@ -12,7 +12,7 @@ commit命令保存的是你的目录下所有文件的快照，就像是把整�
 
 ```bash
 # 提交记录不是挂在当前节点下，而是挂在当前节点的父节点下，即当前节点与提交节点是兄弟关系
-git commit --amend  
+git commit --amend
 ```
 
 
@@ -28,7 +28,7 @@ git checkout -b bugFix
 
 
 ```bash
-git merge bugFix   # 将分支bugFix合并到当前分支上 
+git merge bugFix   # 将分支bugFix合并到当前分支上
 ```
 
 
@@ -273,7 +273,7 @@ git reset --soft HEAD^    # --soft表示只重置HEAD，--hard则重置HEAD，�
 
 仅仅是撤回commit操作，写的代码仍然保留。
 
-不删除工作空间改动代码，撤销commit，不撤销git add . 
+不删除工作空间改动代码，撤销commit，不撤销git add .
 
 ### commit注释写错
 
@@ -367,7 +367,7 @@ git blame -L 58,100 file_name  # 58~100 行代码
 其输出格式为：
 
 ```bash
-commit_ID | 代码提交作者 | 提交时间 | 代码位于文件中的行数 | 实际代码 
+commit_ID | 代码提交作者 | 提交时间 | 代码位于文件中的行数 | 实际代码
 ```
 
 根据 commit_ID 可以查看对应的提交记录：
@@ -411,4 +411,9 @@ git push origin 2.0.2
 ```
 
 
+
+## linux的authorized_keys 不生效解决办法
+
+1. .ssh目录必须是700权限
+2. authorized_keys 文件必须是600权限
 
