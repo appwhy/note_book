@@ -48,7 +48,7 @@
 主要是2个命令：
 
 * `TODO-Highlight: Toggle highlight` : 启动/关闭 相关标记的高亮显示
-* `TODO-Highlight: List highlight annotations` :  在下方的OUTPUT窗口中显示所有标记 
+* `TODO-Highlight: List highlight annotations` :  在下方的OUTPUT窗口中显示所有标记
 
 `DEBUG`  、`TODO` 是两个内置的标记，其他的需要自己配置
 
@@ -179,7 +179,28 @@ Rainbow csv提供了几项强大的特性轻松解决VS Code在CSV文件中遇�
 Ctrl+Shift+T：右下角弹出中文翻译
 
 
+## vscodez支持json5插件： JSON5 syntax
 
+将.json与json5绑定
+```json
+    "files.associations": {
+        "*.json": "json5"
+    },
+```
+
+## 自动激活python虚拟环境
+
+```json
+"python.terminal.activateEnvironment": false,
+```
+
+## html预览
+
+live server
+
+
+
+## Draw.io Integration 在vscode中画流程图
 
 
 

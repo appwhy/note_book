@@ -108,7 +108,7 @@ show 的用法：
 
 
 
-字符串长度： `char_length(str)` ， 
+字符串长度： `char_length(str)` ，
 
 
 
@@ -161,8 +161,8 @@ mysqldump -h 127.0.0.1 -u username -p --no-data -B db | sed 's/AUTO_INCREMENT\s*
 MySQL查询结果保存到本地：
 
 ```bash
-# 这是1条命令 
-mysql -h<公网IP> -P<端口号> -u<用户名> -p<密码> -D<指定数据库> >local.sql <<EOF 
+# 这是1条命令
+mysql -h<公网IP> -P<端口号> -u<用户名> -p<密码> -D<指定数据库> >local.sql <<EOF
 select * from table_name
 EOF
 
@@ -238,6 +238,164 @@ mysql数据库服务器有三个数据库：
 * `views` : 表给出了关于数据库中的视图的信息。
 
 
+
+
+## mysqldump
+
+
+
+```bash
+# 只dump数据
+mysqldump -h127.0.0.1 -P3306 -uroot -p --no-create-info --databases db_1 --tables table_1 --where='date=20220916' > dump.sql
+
+# dump之后可以使用diff查看差别
+
+
+# 不导出数据, 只导出表
+mysqldump -uroot -proot --no-data --databases db1 >/tmp/db1.sql
+```
+
+
+
+* `--lock-tables=false`： 不锁表dump
+
+* `mysqldump　-t　数据库名　-uroot　-p　>　xxx.sql`: 只dump数据，不dump结构。在数据表名前面加”-t“参数
+
+* `-d` / `--no-data`：不dump数据，只dump表结构
+
+* `-B db1 db2 ...` / `--databases db1 db2 ...`：dump多个数据库
+
+
+
+## 日期相关函数
+
+周日是1, 周一是2, 依次类推, 周六是7
+```mysql
+SELECT DAYOFWEEK('1998-02-03');
+
+select dayofweek(str_to_date(''+20220217, '%Y%m%d'));
+```
+
+
+
+## 修改数据
+
+```mysql
+begin;
+rollback;
+commit;
+```
+
+
+
+## IF语句
+
+```mysql
+SELECT
+    IF(1>0, IF(2>1, '真', '假'), '假')
+FROM
+    Table
+```
+
+
+
+```mysql
+SELECT
+    CASE 1
+        WHEN 1 THEN '字段的值是1'
+        WHEN 2 THEN '字段的值是2'
+        ELSE '字段的值3'
+    END
+FROM
+    Table
+```
+
+
+
+## 补0
+
+这里就是查询user表中的ID卡号，不足8位的补零
+
+```mysql
+select lpad(IdcardNo, 8, 0) from user;
+```
+
+
+
+## 查看mysql版本
+
+查看MySQL版本的四种方法
+1、终端下直接使用mysql命令：`mysql -V`
+
+2、同样在终端使用命令： `mysql --help | grep Distrib`
+
+3、登陆mysql之后使用内置命令: `select version();`
+
+4、使用mysql内置命令： `MariaDB [(none)]> status;`
+
+
+
+## 常用命令
+
+```bash
+# 去掉AUTO_INCREMENT
+cat xx.sql |sed 's/AUTO_INCREMENT\s*=\s*[0-9]*\s//g' > xx_new.sql
+```
+
+
+
+### 更好的mysql命令行工具：mycli
+
+- **痛点**：
+
+  - 一些好的可视化工具如navicat不允许使用
+  - 原生的mysql 命令使用时，要select查询字段，要精准的是输入正确字段名称，很容易错
+
+
+
+https://www.mycli.net/install
+
+
+
+```bash
+pip3 install mycli
+pip install mycli==1.20.0
+```
+
+
+
+
+## 将mysql的查询结果保存到文件中
+
+方法一：直接执行命令.
+
+```mysql
+select count(1) from table  into outfile '/tmp/test.xls';
+```
+
+这种方法经常遇到权限的问题。很多时候需要去整权限。
+
+方法二：查询都自动写入文件
+
+```mysql
+pager cat > /tmp/test.txt
+```
+
+之后的所有查询结果都自动写入/tmp/test.txt’，并前后覆盖，在框口不再显示查询结果。
+
+取消pager:
+
+```mysql
+nopager
+```
+
+
+
+方法三：跳出mysql, 直接使用命令行进行重定向
+
+```bash
+ mysql -h 127.0.0.1 -u root -p XXXX -P 3306 -e "select * from table"  > /tmp/test/txt
+```
 
 
 

@@ -417,3 +417,43 @@ git push origin 2.0.2
 1. .ssh目录必须是700权限
 2. authorized_keys 文件必须是600权限
 
+## 回退
+
+```bash
+# 回退到上个版本
+git reset --hard HEAD^
+# 回退到前3次提交之前，以此类推，回退到n次提交之前
+git reset --hard HEAD~3
+# 退到/进到 指定commit的sha码
+git reset --hard commit_id
+
+
+# 强推到远程仓库
+git push origin HEAD --force
+```
+
+
+
+## 显示中文
+
+在使用git的时候，经常会碰到有一些中文文件名或者路径被转义成\xx\xx\xx之类的，此时可以通过git的配置来改变默认转义
+
+```bash
+git config core.quotepath off
+
+# Or for all repositories using:
+git config --global core.quotepath off
+```
+
+
+
+## 查看跟踪的文件
+
+`git ls-files`
+有的时间想要查看一下git跟踪了哪些文件，此命令就可以列出所有git正在跟踪的文件
+
+`git rm --cached FileName`
+git不再跟踪名为FileName的文件，但是文件保留在工作区中，也就是你的目录中
+
+`git rm FileName`
+删除名为FileName的文件，同时git不再跟踪它
