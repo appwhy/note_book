@@ -398,14 +398,57 @@ nopager
 ```
 
 
+## mysql, 后置空格无法识别
+
+我自己排查，命名只有一个，但还是出错，以为是大小写的问题，改成大小写敏感后，还是出错
+https://blog.51cto.com/zhangmh/5529893
+
+
+
+## mysql字符集
+```SQL
+-- 查看MYSQL所支持的字符集
+show charset;
+
+-- 查看字符的校对规则
+SHOW COLLATION;
+```
 
 
 
 
 
+* `utf8_bin`: 将字符串中的每一个字符用二进制数据存储，区分大小写;
+* `utf8_genera_ci`: 不区分大小写，ci为case insensitive的缩写，即大小写不敏感，为utf8默认编码。
 
 
 
+
+
+### utf8mb4_unicode_ci 和 utf8mb4_general_ci
+1、准确性
+
+utf8mb4_unicode_ci 是基于标准的 Unicode 来排序和比较，能够在各种语言之间精确排序
+
+utf8mb4_general_ci 没有实现 Unicode 排序规则，在遇到某些特殊语言或者字符集，排序结果可能不一致。
+
+但是绝大多数情况下，这些特殊字符的顺序并不需要那么精确。
+
+2、性能
+
+utf8mb4_general_ci 在比较和排序的时候更快
+
+utf8mb4_unicode_ci 在特殊情况下，Unicode 排序规则为了能够处理特殊字符的情况，实现了略微复杂的排序算法。
+
+但是在绝大多数情况下，不会发生此类复杂比较。相比选择哪一种 collation，使用者更应该关心字符集与排序规则在 db 里需要统一。
+
+
+
+
+
+参考链接：
+* https://blog.51cto.com/arthur376/1927162
+* https://blog.csdn.net/weixin_38004638/article/details/109291324
 
 
 
